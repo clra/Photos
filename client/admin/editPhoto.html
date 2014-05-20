@@ -1,14 +1,28 @@
 <template name='editPhoto'>
  <form role="form" >
- 	<input type="text" class="form-control" name="titleEdit" placeholder="title">
- 		<select name="photoDropdown">
- 			{{#each photos}}
- 			<option value= {{_id}} > {{title}} : {{url}}</option>
- 			{{/each}}
- 		</select>
-		<textarea class="form-control" name="descriptionEdit" rows="3"></textarea>
+ 	
+ 	<!--this is session is default to entering page and upon cancel-->
+  {{#unless $.Session.equals "editView" true}} 
+ 	<select name="photoDropdown">
+ 		{{#each photos}}
+ 		<option value= {{_id}} > {{title}} : {{url}}</option>
+ 		{{/each}}
+  </select>
+  <button data-action="selectPhoto" type="submit" class="btn btn-default">Edit Selected Photo</button>
+  {{/unless}}
 
-	<button data-action="updatePhoto" type="submit" class="btn btn-default">Submit</button>
+
+
+
+  <!--this is session if click on SelectPhoto  -->
+  {{#if $.Session.equals "editView" true}} 
+ 	<input type="text" class="form-control" name="titleEdit" placeholder="title">
+	<textarea class="form-control" name="descriptionEdit" rows="3"></textarea>
+	<button data-action="cancel" type="button" class="btn btn-danger  ">Cancel</button>
+	<button data-action="updatePhoto" type="submit" class="btn btn-default">Submit Changes</button>
+	{{/if}}
+
+
 </form>
 
 </template>
