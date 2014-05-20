@@ -1,5 +1,4 @@
 <template name='editPhoto'>
-
  <form role="form" >
  	
  	<!--this is session is default to entering page and upon cancel-->
@@ -17,19 +16,13 @@
 
   <!--this is session if click on SelectPhoto  -->
   {{#with editPhotoId}} 
- 	  <input type="text" class="form-control" name="titleEdit" placeholder="Title" value="{{title}}">
-	  <textarea  class="form-control" name="descriptionEdit" rows="3" placeholder="Describe me" >{{description}}</textarea>
-     
-    <input type="text" class="form-control" name="urlEdit" placeholder="https://..." value="{{url}}">
-
-	  <button data-action="cancel" type="button" class="btn btn-danger  ">Cancel</button>
-	  <button data-action="updatePhoto" type="submit" class="btn btn-default">Submit Changes</button>
+ 	<input type="text" class="form-control" name="titleEdit" placeholder="Title" value="{{title}}">
+	<textarea class="form-control" name="descriptionEdit" rows="3" placeholder="Describe me"></textarea>
+	<button data-action="cancel" type="button" class="btn btn-danger  ">Cancel</button>
+	<button data-action="updatePhoto" type="submit" class="btn btn-default">Submit Changes</button>
 	{{/with}}
 
 
-		<textarea class="form-control" rows="3"></textarea>
-
-	<button type="submit" class="btn btn-default">Submit</button>
 </form>
 
 </template>
