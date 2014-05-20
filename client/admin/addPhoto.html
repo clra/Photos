@@ -1,9 +1,9 @@
 <template name='addPhoto'>
 
-<form role="form">
+  <form role="form">
   <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" name="titleInput" placeholder="Name Me">
+    <label for="exampleInputFile">Photo Upload</label>
+    <input type="file" id="exampleInputFile">
   </div>
   <div class="form-group">
     <label for="urlInput">Url</label>
@@ -11,6 +11,7 @@
   </div>
   <textarea class="form-control" name="descriptionInput" type="text" rows="3" placeholder="Describe Me"></textarea>
   <button type="submit" class="btn btn-primary" data-action="inputPhoto">Submit</button>
+
 </form>
 
 </template>

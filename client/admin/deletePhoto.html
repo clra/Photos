@@ -2,14 +2,10 @@
 
 <template name='deletePhoto'>
 
-	<form role="form">
-		<select name="removeDropdown">
- 			{{#each photos}}
- 			<option value= {{_id}} > {{title}} : {{url}}</option>
- 			{{/each}}
- 		</select>
-		<button data-action="removePhoto" type="button" class="btn btn-danger btn-lg ">Delete</button>
-		
+		<form role="form">
+		 <div class="center-block">
+		 		<button type="button" class="btn btn-danger btn-lg ">Delete</button>
+		</div>
 	</form>
 	
 </template>
