@@ -8,12 +8,15 @@ Template.editPhoto.editPhotoId = function(){
 
 Template.editPhoto.events({
  "click [data-action='updatePhoto']" : function(e, t){
+ 	this._id;
  	e.preventDefault();
- 	Photos.update({_id: Session.get("editView")},
- 	{$set: {
- 		title: $(t.find("[name='titleEdit']")).val(), 
-  	description: $(t.find("[name='descriptionEdit']")).val()
-   }      })
+ 	Photos.update({_id: Session.get("editView")}, {
+ 		$set: {
+ 			title: $(t.find("[name='titleEdit']")).val(), 
+  		description: $(t.find("[name='descriptionEdit']")).val(),
+  		url: $(t.find("[name='urlEdit']")).val()
+   	}
+  })
   Session.set("editView", false); 
    
  },
