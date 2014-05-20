@@ -2,7 +2,7 @@
  <form role="form" >
  	
  	<!--this is session is default to entering page and upon cancel-->
-  {{#unless $.Session.equals "editView" true}} 
+  {{#unless $.Session.get "editView"}} 
  	<select name="photoDropdown">
  		{{#each photos}}
  		<option value= {{_id}} > {{title}} : {{url}}</option>
@@ -15,12 +15,12 @@
 
 
   <!--this is session if click on SelectPhoto  -->
-  {{#if $.Session.equals "editView" true}} 
- 	<input type="text" class="form-control" name="titleEdit" placeholder="title">
-	<textarea class="form-control" name="descriptionEdit" rows="3"></textarea>
+  {{#with editPhotoId}} 
+ 	<input type="text" class="form-control" name="titleEdit" placeholder="Title" value="{{title}}">
+	<textarea class="form-control" name="descriptionEdit" rows="3" placeholder="Describe me"></textarea>
 	<button data-action="cancel" type="button" class="btn btn-danger  ">Cancel</button>
 	<button data-action="updatePhoto" type="submit" class="btn btn-default">Submit Changes</button>
-	{{/if}}
+	{{/with}}
 
 
 </form>
