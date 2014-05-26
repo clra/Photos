@@ -1,4 +1,27 @@
-body{
-	background:url('/resources/back.jpg') no-repeat;
+body {
+	background:url('/resources/back.jpg') no-repeat center center fixed;
 	background-size: cover;
+	height: 100%;
+	text-align: center;
+}
+h1 {
+	color: white;
+  background-color: #57167D;
+  width: 270px;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: 5px 9px 10px #1b1616;
+}
+#reel {
+background:rgba(255,255,255, 0.9);
+width: 85%;
+height: 210px;
+margin: 25px auto;
+border-radius: 10px;
+box-shadow: 5px 9px 10px #1b1616;
+}
+#tester {
+  width: 300px;
+  height: 200px;
+  padding-top: 10px;
 }
