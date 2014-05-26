@@ -7,3 +7,6 @@ standard-app-packages
 iron-router
 bootstrap-3
 handlebar-helpers
+accounts-base
+accounts-password
+accounts-ui-bootstrap-3

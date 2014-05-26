@@ -11,4 +11,19 @@ var generalPermissions = {
   }
 };
 
+/* var userPermissions = {
+  insert: function(userId, userPassword){
+    return true;
+  },
+  update: function(userId, userPassword){
+    return true;
+  },
+  remove: function(userId, userPassword){
+    return true;
+  }
+ }; 
+} */
+
 Photos.allow(generalPermissions);
+Meteor.users.allow(generalPermissions);
+

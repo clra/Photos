@@ -2,6 +2,7 @@
   "packages": {
     "iron-router": {},
     "bootstrap-3": {},
-    "handlebar-helpers": {}
+    "handlebar-helpers": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }
