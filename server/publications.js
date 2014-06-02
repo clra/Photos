@@ -3,7 +3,5 @@ Meteor.publish("allPhotos", function(){
 });
 
 Meteor.publish("onePhoto", function(){
-	return Photos.findOne({userId: this.userId});
+	return Photos.findOne({});
 });
-
-

@@ -1,16 +1,16 @@
 <template name='addPhoto'>
-
+{{#if currentUser}}
 <form role="form">
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" name="titleInput" placeholder="Name Me">
   </div>
   <div class="form-group">
-    <label for="urlInput">Url</label>
-    <input type="url" class="form-control" name="urlInput" placeholder="http://......">
+    <label>Upload a Image</label>
+        {{> uploadImage}}
   </div>
   <textarea class="form-control" name="descriptionInput" type="text" rows="3" placeholder="Describe Me"></textarea>
   <button type="submit" class="btn btn-primary" data-action="inputPhoto" >Submit</button>
 </form>
-
+{{/if}}
 </template>
