@@ -1,5 +1,3 @@
-
-
 var imageStore = new FS.Store.FileSystem("images", {
   //path: "public/images", //optional, default is "/cfs/files" path within app container
   //transformRead: myTransformReadFunction, //optional
